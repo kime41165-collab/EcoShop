@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+        } 
+        /* Header */
+        header {
+          background: #fff;
+          box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+          position: fixed;
+          width: 100%;
+          top: 0;
+          z-index: 100;
+        }
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 0;
+        }
+        .logo {
+          font-size: 24px;
+          font-weight: bold;
+          color: #4a7c59;
+        }
+        .nav-links a {
+          margin-left: 30px;
+          font-weight: 500;
+          transition: color 0.3s;
+        }
+        .nav-links a:hover {
+          color: #4a7c59;
+        }
+        /* Header/Hero Section */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: url('../image/photo_2025-12-29_11-11-27.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #ffffff; /* Orange/gold color matching the screenshot */
+        }
+
+        .breadcrumb {
+            font-size: 16px;
+        }
+
+        .breadcrumb a {
+            color: #ffffff;
+        }
+
+        /* Main Contact Section */
+        .contact-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        /* Form Styles */
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #4a7c59;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #4f805d;
+        }
+
+        /* Contact Info Styles */
+        .contact-info h2 {
+            color: #4a7c59;
+            margin-bottom: 20px;
+            font-size: 36px;
+        }
+
+        .contact-info p {
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .info-item img {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            filter: brightness(0) saturate(100%) invert(67%) sepia(71%) saturate(1048%) hue-rotate(359deg) brightness(103%) contrast(101%); /* Makes icons orange */
+        }
+
+        .social-links {
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .social-links img {
+            width: 32px;
+            height: 32px;
+            filter: brightness(0) saturate(100%) invert(67%) sepia(71%) saturate(1048%) hue-rotate(359deg) brightness(103%) contrast(101%);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">EcoGlow</div>
+        <div class="nav-links">
+          <a href="code.html">Home</a>
+          <a href="Shop.html">Shop</a>
+          <a href="product.html">products</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <div class="breadcrumb">
+                Home / <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" placeholder="Your Email Address" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Subject" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Message</label>
+                    <textarea placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">SEND MESSAGE</button>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            <p>Nullam fermentum ullamcorper diam sit amet porta. Etiam ac enim velit. Ut et mi sed turpis convallis gravida at et magna. Donec a nisl nibh. Nulla eu erat nec Donec ut felis libero. Donec tincidunt consequat tellus, et mattis sapien condimentum.</p>
+
+            <div class="info-item">
+                <!-- <img src="https://via.placeholder.com/24?text=Phone" alt="Phone"> -->
+                <div>
+                    <strong>Call Us</strong><br>
+                    +885 ...
+                </div>
+            </div>
+
+            <div class="info-item">
+                <!-- <img src="https://via.placeholder.com/24?text=Mail" alt="Email"> -->
+                <div>
+                    <strong>Email Us</strong><br>
+                    hello@EcoGlowwebsite.com
+                </div>
+            </div>
+
+            <div class="info-item">
+                <!-- <img src="https://via.placeholder.com/24?text=Web" alt="Website"> -->
+                <div>
+                    <strong>Website</strong><br>
+                    www.EcoGlowwebsite.com
+                </div>
+            </div>
+
+            <div class="info-item">
+                <!-- <img src="https://via.placeholder.com/24?text=Address" alt="Address"> -->
+                <div>
+                    <strong>Address</strong><br>
+                    99 Roving St., Big City, PKU 23456
+                </div>
+            </div>
+
+            <div class="social-links">
+                <strong>Follow Us On</strong><br><br>
+                <a href="#"><img src="https://via.placeholder.com/32?text=FB" alt="Facebook"></a>
+                <a href="#"><img src="https://via.placeholder.com/32?text=TW" alt="Twitter"></a>
+                <a href="#"><img src="https://via.placeholder.com/32?text=IG" alt="Instagram"></a>
+                <a href="#"><img src="https://via.placeholder.com/32?text=YT" alt="YouTube"></a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

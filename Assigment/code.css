@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f5f5f5, #e8f0e8);
+    color: #333;
+    line-height: 1.6;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Header */
+  header {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a7c59;
+  }
+  .nav-links a {
+    margin-left: 30px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover {
+    color: #4a7c59;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 50px;
+    min-height: 80vh;
+    background-color: white;
+  }
+
+  .hero-content {
+    max-width: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+
+  .cta-button {
+    background-color: #000;
+    color: white;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .cta-button:hover {
+    background-color: #333;
+  }
+
+  .hero-image {
+    max-width: 50%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 968px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 60px 30px;
+    }
+
+    .hero-content {
+      max-width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .hero-image {
+      max-width: 80%;
+    }
+
+    header {
+      padding: 20px;
+    }
+
+    nav ul {
+      gap: 20px;
+    }
+
+    .search-bar input {
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    nav ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      margin-top: 15px;
+    }
+  }
+
+  /* Ingredients Section */
+  .ingredients {
+    padding: 100px 0;
+    background: #fff;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+    color: #333;
+  }
+  .ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  .ingredient-item {
+    text-align: center;
+  }
+  .ingredient-item img {
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .ingredient-item h3 {
+    margin: 15px 0;
+    color: #4a7c59;
+  }
+
+  /* Catalog Section */
+  .catalog {
+    padding: 100px 0;
+    background: #f0f8f0;
+  }
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  .product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  .product-card:hover {
+    transform: translateY(-10px);
+  }
+  .product-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+  .product-info {
+    padding: 20px;
+  }
+  .product-info h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4a7c59;
+    margin: 10px 0;
+  }
+  .add-to-cart {
+    background: #4a7c59;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-top: 15px;
+    display: inline-block;
+  }
+
+  /* Footer */
+  footer {
+    background: #4a7c59;
+    color: white;
+    padding: 80px 0 40px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  .footer-item h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .footer-item ul {
+    list-style: none;
+  }
+  .footer-item ul li {
+    margin-bottom: 10px;
+  }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 14px;
+  }
